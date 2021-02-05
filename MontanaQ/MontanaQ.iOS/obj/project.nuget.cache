@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "mqeV9edAkkC/Xn9T91oyT6TbHwNEX42ENcekNu6JrShmLq7vpd3tksWU2g4l4jkZQ2e16VUBDRumB+FQjWz7qg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ma\\source\\repos\\MontanaQ\\MontanaQ\\MontanaQ.iOS\\MontanaQ.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ma\\.nuget\\packages\\sharpnado.materialframe\\1.1.3\\sharpnado.materialframe.1.1.3.nupkg.sha512",
+    "C:\\Users\\Ma\\.nuget\\packages\\sharpnado.shadows\\1.2.0\\sharpnado.shadows.1.2.0.nupkg.sha512",
+    "C:\\Users\\Ma\\.nuget\\packages\\sharpnado.tabs\\2.0.1\\sharpnado.tabs.2.0.1.nupkg.sha512",
+    "C:\\Users\\Ma\\.nuget\\packages\\sharpnado.taskmonitor\\1.0.1\\sharpnado.taskmonitor.1.0.1.nupkg.sha512",
+    "C:\\Users\\Ma\\.nuget\\packages\\skiasharp\\1.68.0\\skiasharp.1.68.0.nupkg.sha512",
+    "C:\\Users\\Ma\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Ma\\.nuget\\packages\\thomaslevesque.weakevent\\4.1.0\\thomaslevesque.weakevent.4.1.0.nupkg.sha512",
+    "C:\\Users\\Ma\\.nuget\\packages\\webp.touch\\1.0.8\\webp.touch.1.0.8.nupkg.sha512",
+    "C:\\Users\\Ma\\.nuget\\packages\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Users\\Ma\\.nuget\\packages\\xamarin.ffimageloading\\2.4.11.982\\xamarin.ffimageloading.2.4.11.982.nupkg.sha512",
+    "C:\\Users\\Ma\\.nuget\\packages\\xamarin.ffimageloading.forms\\2.4.11.982\\xamarin.ffimageloading.forms.2.4.11.982.nupkg.sha512",
+    "C:\\Users\\Ma\\.nuget\\packages\\xamarin.ffimageloading.svg\\2.4.11.982\\xamarin.ffimageloading.svg.2.4.11.982.nupkg.sha512",
+    "C:\\Users\\Ma\\.nuget\\packages\\xamarin.ffimageloading.svg.forms\\2.4.11.982\\xamarin.ffimageloading.svg.forms.2.4.11.982.nupkg.sha512",
+    "C:\\Users\\Ma\\.nuget\\packages\\xamarin.ffimageloading.transformations\\2.4.11.982\\xamarin.ffimageloading.transformations.2.4.11.982.nupkg.sha512",
+    "C:\\Users\\Ma\\.nuget\\packages\\xamarin.forms\\5.0.0.1931\\xamarin.forms.5.0.0.1931.nupkg.sha512",
+    "C:\\Users\\Ma\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.1931\\xamarin.forms.visual.material.5.0.0.1931.nupkg.sha512",
+    "C:\\Users\\Ma\\.nuget\\packages\\xamarin.ios.materialcomponents\\92.0.0\\xamarin.ios.materialcomponents.92.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

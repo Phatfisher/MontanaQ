@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="MontanaQ.Views.HomePage"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+	xmlns:rv="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+	xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
+	xmlns:tabs="clr-namespace:Sharpnado.Tabs;assembly=Sharpnado.Tabs"
+	xmlns:vm="clr-namespace:MontanaQ.ViewModels"
+	BackgroundColor="White"
+	Visual="Material">
+
+	<ContentPage.BindingContext>
+		<vm:HomeViewModel />
+	</ContentPage.BindingContext>
+
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout Margin="5,20,5,20" CompressedLayout.IsHeadless="True">
+
+				<ffimageloading:CachedImage
+					Aspect="AspectFit"
+					HeightRequest="150"
+					HorizontalOptions="Center"
+					Source="Grill.png" />
+
+				<!--<Label
+					FontAttributes="Bold"
+					FontSize="Large"
+					Text="MontanaQue BBQ House"
+					TextColor="Black" />-->
+
+				<sh:Shadows
+					Margin="0,20,0,0"
+					CornerRadius="24"
+					IsClippedToBounds="False"
+					Shades="{sh:SingleShade Offset='0, 30',
+					                        BlurRadius=60,
+					                        Opacity=0.20,
+					                        Color='#8A959E'}">
+					<Grid ColumnDefinitions="80,150" RowDefinitions="100">
+						<Grid.GestureRecognizers>
+							<TapGestureRecognizer Command="{Binding SelectedCommand}" />
+						</Grid.GestureRecognizers>
+						<BoxView
+							Grid.ColumnSpan="2"
+							BackgroundColor="#F1F1F1"
+							CornerRadius="24" />
+						<StackLayout
+							Grid.Column="1"
+							Orientation="Vertical"
+							VerticalOptions="Center">
+							<Label
+								FontAttributes="Bold"
+								FontSize="20"
+								Text="Food" />
+							<Label
+								FontSize="20"
+								Text="$$"
+								VerticalOptions="Center" />
+						</StackLayout>
+						<Image
+							Grid.Column="0"
+							Margin="10"
+							Aspect="AspectFill"
+							HorizontalOptions="Center"
+							Source="Grill.png"
+							VerticalOptions="Center" />
+					</Grid>
+				</sh:Shadows>
+
+				<Grid
+					Margin="0,50"
+					BackgroundColor="White"
+					ColumnDefinitions="284"
+					HorizontalOptions="Center"
+					IsClippedToBounds="False"
+					RowDefinitions="50,80,142"
+					RowSpacing="0"
+					VerticalOptions="Start">
+					<sh:Shadows
+						Grid.Row="1"
+						Grid.RowSpan="2"
+						Margin="0,20,0,0"
+						CornerRadius="24"
+						IsClippedToBounds="False"
+						Shades="{sh:SingleShade Offset='0, 30',
+						                        BlurRadius=60,
+						                        Opacity=0.20,
+						                        Color='#8A959E'}">
+						<BoxView
+							Grid.Row="1"
+							Grid.RowSpan="2"
+							BackgroundColor="#F1F1F1"
+							CornerRadius="24" />
+					</sh:Shadows>
+					<Grid
+						Grid.Row="2"
+						Margin="24,0"
+						ColumnDefinitions="*,*,*"
+						RowDefinitions="24,24,*"
+						VerticalOptions="Start">
+						<Label
+							Grid.ColumnSpan="3"
+							FontSize="20"
+							Text="Name" />
+						<Label
+							Grid.Row="1"
+							Grid.ColumnSpan="2"
+							FontSize="18"
+							Text="Tag"
+							TextColor="Black" />
+						<Label
+							Grid.Column="2"
+							Grid.ColumnSpan="2"
+							FontSize="18"
+							HorizontalOptions="End">
+							<Label.FormattedText>
+								<FormattedString>
+
+									<Span Text="{Binding Stars, StringFormat=' ({0:F2})'}" TextColor="#F1F1F1" />
+								</FormattedString>
+							</Label.FormattedText>
+						</Label>
+						<Label
+							Grid.Row="2"
+							Grid.ColumnSpan="2"
+							FontSize="20"
+							Text="$$$"
+							VerticalOptions="Center" />
+
+					</Grid>
+					<Image
+						Grid.Row="0"
+						Grid.RowSpan="3"
+						Aspect="AspectFit"
+						HorizontalOptions="Center"
+						InputTransparent="True"
+						Source="Grill.png"
+						VerticalOptions="Start"
+						WidthRequest="300">
+						<Image.Clip>
+							<RectangleGeometry Rect="0,0,300,120" />
+						</Image.Clip>
+					</Image>
+				</Grid>
+
+
+
+
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

@@ -15,73 +15,37 @@
 		<vm:HomeViewModel />
 	</ContentPage.BindingContext>
 
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<Style x:Key="BottomTabStyle" TargetType="tabs:BottomTabItem">
+				<Setter Property="SelectedTabColor" Value="{StaticResource Primary}" />
+				<Setter Property="UnselectedLabelColor" Value="Gray" />
+				<Setter Property="UnselectedIconColor" Value="LightGray" />
+				<Setter Property="LabelSize" Value="14" />
+				<Setter Property="IconSize" Value="28" />
+				<Setter Property="IsTextVisible" Value="False" />
+			</Style>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+
 	<ContentPage.Content>
-		<ScrollView>
-			<StackLayout Margin="5,20,5,20" CompressedLayout.IsHeadless="True">
 
-				<ffimageloading:CachedImage
-					Aspect="AspectFit"
-					HeightRequest="150"
-					HorizontalOptions="Center"
-					Source="Grill.png" />
+		<Grid RowDefinitions="*">
+			<ScrollView Grid.Row="0">
+				<StackLayout Margin="5,20,5,20" CompressedLayout.IsHeadless="True">
+					<ffimageloading:CachedImage
+						Aspect="AspectFit"
+						HeightRequest="150"
+						HorizontalOptions="Center"
+						Source="Grill.png" />
 
-				<!--<Label
-					FontAttributes="Bold"
-					FontSize="Large"
-					Text="MontanaQue BBQ House"
-					TextColor="Black" />-->
+					<Label
+						FontAttributes="Bold"
+						FontSize="Large"
+						Text="MontanaQue BBQ House"
+						TextColor="Black" />
 
-				<sh:Shadows
-					Margin="0,20,0,0"
-					CornerRadius="24"
-					IsClippedToBounds="False"
-					Shades="{sh:SingleShade Offset='0, 30',
-					                        BlurRadius=60,
-					                        Opacity=0.20,
-					                        Color='#8A959E'}">
-					<Grid ColumnDefinitions="80,150" RowDefinitions="100">
-						<Grid.GestureRecognizers>
-							<TapGestureRecognizer Command="{Binding SelectedCommand}" />
-						</Grid.GestureRecognizers>
-						<BoxView
-							Grid.ColumnSpan="2"
-							BackgroundColor="#F1F1F1"
-							CornerRadius="24" />
-						<StackLayout
-							Grid.Column="1"
-							Orientation="Vertical"
-							VerticalOptions="Center">
-							<Label
-								FontAttributes="Bold"
-								FontSize="20"
-								Text="Food" />
-							<Label
-								FontSize="20"
-								Text="$$"
-								VerticalOptions="Center" />
-						</StackLayout>
-						<Image
-							Grid.Column="0"
-							Margin="10"
-							Aspect="AspectFill"
-							HorizontalOptions="Center"
-							Source="Grill.png"
-							VerticalOptions="Center" />
-					</Grid>
-				</sh:Shadows>
-
-				<Grid
-					Margin="0,50"
-					BackgroundColor="White"
-					ColumnDefinitions="284"
-					HorizontalOptions="Center"
-					IsClippedToBounds="False"
-					RowDefinitions="50,80,142"
-					RowSpacing="0"
-					VerticalOptions="Start">
 					<sh:Shadows
-						Grid.Row="1"
-						Grid.RowSpan="2"
 						Margin="0,20,0,0"
 						CornerRadius="24"
 						IsClippedToBounds="False"
@@ -89,67 +53,175 @@
 						                        BlurRadius=60,
 						                        Opacity=0.20,
 						                        Color='#8A959E'}">
-						<BoxView
+						<Grid ColumnDefinitions="80,150" RowDefinitions="100">
+							<Grid.GestureRecognizers>
+								<TapGestureRecognizer Command="{Binding SelectedCommand}" />
+							</Grid.GestureRecognizers>
+							<BoxView
+								Grid.ColumnSpan="2"
+								BackgroundColor="#F1F1F1"
+								CornerRadius="24" />
+							<StackLayout
+								Grid.Column="1"
+								Orientation="Vertical"
+								VerticalOptions="Center">
+								<Label
+									FontAttributes="Bold"
+									FontSize="20"
+									Text="Food" />
+								<Label
+									FontSize="20"
+									Text="$$"
+									VerticalOptions="Center" />
+							</StackLayout>
+							<Image
+								Grid.Column="0"
+								Margin="10"
+								Aspect="AspectFill"
+								HorizontalOptions="Center"
+								Source="Grill.png"
+								VerticalOptions="Center" />
+						</Grid>
+					</sh:Shadows>
+
+					<Grid
+						Margin="0,50,0,150"
+						BackgroundColor="White"
+						ColumnDefinitions="284"
+						HorizontalOptions="Center"
+						IsClippedToBounds="False"
+						RowDefinitions="50,80,142"
+						RowSpacing="0"
+						VerticalOptions="Start">
+						<sh:Shadows
 							Grid.Row="1"
 							Grid.RowSpan="2"
-							BackgroundColor="#F1F1F1"
-							CornerRadius="24" />
-					</sh:Shadows>
-					<Grid
-						Grid.Row="2"
-						Margin="24,0"
-						ColumnDefinitions="*,*,*"
-						RowDefinitions="24,24,*"
-						VerticalOptions="Start">
-						<Label
-							Grid.ColumnSpan="3"
-							FontSize="20"
-							Text="Name" />
-						<Label
-							Grid.Row="1"
-							Grid.ColumnSpan="2"
-							FontSize="18"
-							Text="Tag"
-							TextColor="Black" />
-						<Label
-							Grid.Column="2"
-							Grid.ColumnSpan="2"
-							FontSize="18"
-							HorizontalOptions="End">
-							<Label.FormattedText>
-								<FormattedString>
-
-									<Span Text="{Binding Stars, StringFormat=' ({0:F2})'}" TextColor="#F1F1F1" />
-								</FormattedString>
-							</Label.FormattedText>
-						</Label>
-						<Label
+							Margin="0,20,0,0"
+							CornerRadius="24"
+							IsClippedToBounds="False"
+							Shades="{sh:SingleShade Offset='0, 30',
+							                        BlurRadius=60,
+							                        Opacity=0.20,
+							                        Color='#8A959E'}">
+							<BoxView
+								Grid.Row="1"
+								Grid.RowSpan="2"
+								BackgroundColor="#F1F1F1"
+								CornerRadius="24" />
+						</sh:Shadows>
+						<Grid
 							Grid.Row="2"
-							Grid.ColumnSpan="2"
-							FontSize="20"
-							Text="$$$"
-							VerticalOptions="Center" />
+							Margin="24,0"
+							ColumnDefinitions="*,*,*"
+							RowDefinitions="24,24,*"
+							VerticalOptions="Start">
+							<Label
+								Grid.ColumnSpan="3"
+								FontSize="20"
+								Text="Name" />
+							<Label
+								Grid.Row="1"
+								Grid.ColumnSpan="2"
+								FontSize="18"
+								Text="Tag"
+								TextColor="Black" />
+							<Label
+								Grid.Column="2"
+								Grid.ColumnSpan="2"
+								FontSize="18"
+								HorizontalOptions="End">
+								<Label.FormattedText>
+									<FormattedString>
 
+										<Span Text="{Binding Stars, StringFormat=' ({0:F2})'}" TextColor="#F1F1F1" />
+									</FormattedString>
+								</Label.FormattedText>
+							</Label>
+							<Label
+								Grid.Row="2"
+								Grid.ColumnSpan="2"
+								FontSize="20"
+								Text="$$$"
+								VerticalOptions="Center" />
+
+						</Grid>
+						<Image
+							Grid.Row="0"
+							Grid.RowSpan="3"
+							Aspect="AspectFit"
+							HorizontalOptions="Center"
+							InputTransparent="True"
+							Source="Grill.png"
+							VerticalOptions="Start"
+							WidthRequest="300">
+							<Image.Clip>
+								<RectangleGeometry Rect="0,0,300,120" />
+							</Image.Clip>
+						</Image>
 					</Grid>
-					<Image
-						Grid.Row="0"
-						Grid.RowSpan="3"
-						Aspect="AspectFit"
-						HorizontalOptions="Center"
-						InputTransparent="True"
-						Source="Grill.png"
-						VerticalOptions="Start"
-						WidthRequest="300">
-						<Image.Clip>
-							<RectangleGeometry Rect="0,0,300,120" />
-						</Image.Clip>
-					</Image>
-				</Grid>
+				</StackLayout>
+			</ScrollView>
 
 
+			<Grid
+				Grid.Row="0"
+				BackgroundColor="Transparent"
+				ColumnSpacing="0"
+				RowSpacing="0"
+				VerticalOptions="End">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*" />
+					<RowDefinition Height="95" />
+				</Grid.RowDefinitions>
 
+				<tabs:ViewSwitcher
+					x:Name="Switcher"
+					Animate="False"
+					SelectedIndex="{Binding SelectedViewModelIndex, Mode=TwoWay}" />
 
-			</StackLayout>
-		</ScrollView>
+				<tabs:TabHostView
+					Grid.Row="1"
+					Margin="15"
+					BackgroundColor="Black"
+					CornerRadius="30"
+					HeightRequest="60"
+					HorizontalOptions="Center"
+					IsSegmented="True"
+					SelectedIndex="{Binding Source={x:Reference Switcher}, Path=SelectedIndex, Mode=TwoWay}"
+					Shades="{sh:NeumorphismShades}"
+					TabType="Fixed"
+					VerticalOptions="Start"
+					WidthRequest="280">
+					<tabs:TabHostView.Tabs>
+						<tabs:BottomTabItem Style="{StaticResource BottomTabStyle}">
+							<tabs:BottomTabItem.IconImageSource>
+								<FontImageSource
+									FontFamily="FontAwesomeSolid"
+									Glyph="&#xf015;"
+									Color="White" />
+							</tabs:BottomTabItem.IconImageSource>
+						</tabs:BottomTabItem>
+						<tabs:BottomTabItem Style="{StaticResource BottomTabStyle}">
+							<tabs:BottomTabItem.IconImageSource>
+								<FontImageSource
+									FontFamily="FontAwesomeSolid"
+									Glyph="&#xf022;"
+									Color="White" />
+							</tabs:BottomTabItem.IconImageSource>
+						</tabs:BottomTabItem>
+						<tabs:BottomTabItem Style="{StaticResource BottomTabStyle}">
+							<tabs:BottomTabItem.IconImageSource>
+								<FontImageSource
+									FontFamily="FontAwesomeSolid"
+									Glyph="&#xf2e7;"
+									Color="White" />
+							</tabs:BottomTabItem.IconImageSource>
+						</tabs:BottomTabItem>
+					</tabs:TabHostView.Tabs>
+				</tabs:TabHostView>
+
+			</Grid>
+		</Grid>
+
 	</ContentPage.Content>
 </ContentPage>

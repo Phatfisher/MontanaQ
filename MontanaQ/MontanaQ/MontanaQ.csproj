@@ -6,6 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\FA\FontAwesome5Regular.otf" />
+    <None Remove="Resources\FA\FontAwesome5Solid.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\FA\FontAwesome5Regular.otf" />
+    <EmbeddedResource Include="Resources\FA\FontAwesome5Solid.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Sharpnado.MaterialFrame" Version="1.1.3" />
     <PackageReference Include="Sharpnado.Shadows" Version="1.2.0" />
     <PackageReference Include="Sharpnado.Tabs" Version="2.0.1" />

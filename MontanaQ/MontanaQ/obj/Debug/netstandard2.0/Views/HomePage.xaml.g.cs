@@ -17,8 +17,12 @@ namespace MontanaQ.Views {
     public partial class HomePage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Sharpnado.Tabs.ViewSwitcher Switcher;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(HomePage));
+            Switcher = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Sharpnado.Tabs.ViewSwitcher>(this, "Switcher");
         }
     }
 }

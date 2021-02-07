@@ -4,6 +4,8 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+[assembly: ExportFont("FontAwesome5Regular.otf", Alias = "FontAwesomeRegular")]
+[assembly: ExportFont("FontAwesome5Solid.otf", Alias = "FontAwesomeSolid")]
 namespace MontanaQ
 {
 	public partial class App : Application
